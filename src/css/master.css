@@ -1,0 +1,57 @@
+*{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    margin: 0;
+    padding: 0;
+}
+
+.navigationBar{
+    font-size: 30px;
+    font-weight: 900;
+    background-color: blue;
+    display: flex;
+    color: white;
+    text-indent: 10px;
+    justify-content: space-between;
+}
+
+.navigationBar button{
+    margin-right: 10px;
+    padding: 5px;
+    border: 0px;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+
+.tableField{
+    display: grid;
+    grid-template-columns: repeat(4,1fr());
+    border: 1px solid blue;
+    padding: 10px;
+}
+
+.tableField div:nth-child(1){
+    grid-column-start: 1;
+}
+
+.tableField div:nth-child(2){
+    grid-column-start: 2;
+}
+
+.tableField div:nth-child(3){
+    grid-column-start: 3;
+}
+
+.tableField div:nth-child(4){
+    grid-column-start: 4;
+}
+
+.datadisplayarea{
+    height: 600px;
+    background-color: white;
+    color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}

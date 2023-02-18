@@ -1,14 +1,51 @@
 import { signOut } from "firebase/auth";
-import React, { useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { auth } from "../firebase";
-import { AuthContext } from "../context/AuthContext";
+import { doc, getFirestore, setDoc, getDoc } from "firebase/firestore";
+import { async } from "@firebase/util";
+// import { AuthContext } from "../context/AuthContext";
+import {
+  // getDatabase,
+  ref,
+  get,
+  // onValue,
+  // set,
+  child,
+  // push,
+  // update,
+} from "firebase/database";
+import Data from "../components/Data";
 
-const HomePage = (user) => {
-  const { currentUser } = useContext(AuthContext);
+const HomePage = (props) => {
+  // const { currentUser } = useContext(AuthContext);
+  // const [flowerCount, setFlowerCount] = useState(0);
+  const [data, setData] = useState([]);
+  const db = getFirestore();
+
+  const ReadData = async (e) => {
+    // e.preventDefault();
+    const docSnap = await getDoc(doc(db, "Inventory", "Products"));
+    setData(docSnap.data());
+  };
+
+  useEffect(() => {
+    ReadData();
+  }, []);
+
+  // const WriteData = async (e) => {
+  //   e.preventDefault();
+  //   await setDoc(doc(db, "Inventory", "Products"), {
+  //     Flowers: data,
+  //   });
+  // };
+
   return (
     <>
-      <h1>Welcome Admin</h1>
-      <button onClick={() => signOut(auth)}>Logout</button>
+      <div className="navigationBar">
+        Concise Decoration
+        <button onClick={() => signOut(auth)}>Logout</button>
+      </div>
+      <Data data={data} />
     </>
   );
 };

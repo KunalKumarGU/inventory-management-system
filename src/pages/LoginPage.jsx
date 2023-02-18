@@ -5,18 +5,14 @@ import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const navigate = useNavigate();
-  const [user, setUser] = useState({});
+  // const [user, setUser] = useState({});
   const [err, setErr] = useState("");
   const handleSubmit = async (e) => {
     e.preventDefault();
     const email = e.target[0].value;
     const password = e.target[1].value;
     try {
-      await signInWithEmailAndPassword(auth, email, password).then(
-        (userCredentials) => {
-          console.log(userCredentials.user);
-        }
-      );
+      await signInWithEmailAndPassword(auth, email, password);
       navigate("/");
     } catch (error) {
       setErr(error);
