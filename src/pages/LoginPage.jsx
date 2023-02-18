@@ -26,7 +26,7 @@ const LoginPage = () => {
   return (
     <div className="registerPageWrapper">
       <form className="registerPageForm" onSubmit={handleSubmit}>
-        <input type="email" placeholder="email" />
+        <input type="email" placeholder="emmail" />
         <input type="password" placeholder="Password" />
         <br />
         <button>Login</button>
