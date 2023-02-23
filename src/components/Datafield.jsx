@@ -3,12 +3,11 @@ import React from "react";
 const Datafield = (props) => {
   const { value } = props;
   return (
-    <div className="tableField">
-      <div>{value[0]}</div>
-      <div>{value[1]}</div>
-      <div></div>
-      <div></div>
-    </div>
+    <tr className="dataInRow">
+      <td className="data">{value[0]}</td>
+      <td className="data">{value[1]}</td>
+      <td className="data">x</td>
+    </tr>
   );
 };
 

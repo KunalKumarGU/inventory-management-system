@@ -6,8 +6,9 @@
 
 .navigationBar{
     font-size: 30px;
+    padding: 10px;
     font-weight: 900;
-    background-color: blue;
+    background-color: rgb(50, 50, 50);
     display: flex;
     color: white;
     text-indent: 10px;
@@ -19,39 +20,127 @@
     padding: 5px;
     border: 0px;
     border-radius: 2px;
+    width: 70px;
+    font-size: 17px;
+    color: rgb(50, 50, 50);
+    background-color: white;
     outline: none;
     cursor: pointer;
 }
 
-.tableField{
-    display: grid;
-    grid-template-columns: repeat(4,1fr());
-    border: 1px solid blue;
-    padding: 10px;
+.formWrapper{
+    background-color: rgb(50, 50, 50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.tableField div:nth-child(1){
-    grid-column-start: 1;
-}
-
-.tableField div:nth-child(2){
-    grid-column-start: 2;
-}
-
-.tableField div:nth-child(3){
-    grid-column-start: 3;
-}
-
-.tableField div:nth-child(4){
-    grid-column-start: 4;
-}
-
-.datadisplayarea{
-    height: 600px;
-    background-color: white;
-    color: blue;
+.form{
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
+    height: 500px;
+    width: 400px;
+    background-color: white;
+    overflow: hidden;
+    align-items: center;
+    gap: 50px;
+}
+
+.mainText{
+    margin: 50px 0px 25px 0px;
+    font-size: 50px;
+}
+
+.input{
+    height: 30px;
+    width: 80%;
+    text-align: center;
+}
+
+.input::placeholder{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.button{
+    border: 1px solid rgb(50,50,50);
+    outline: none;
+    padding: 5px;
+    font-size: 25px;
+    text-align: center;
+    width: 80%;
+    border-radius: 5px;
+    background-color: rgb(50,50,50);
+    color: white;
+}
+
+
+.datadisplayarea{
+    display: flex;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
+}
+
+.table{
+    width: 80%;
+    padding: 5px;
+    margin: 30px 0px 0px 0px;
+    border: 1px solid rgb(50,50,50);
+}
+
+.dataInRow{
+    text-align: center;
+}
+
+.headingRow{
+    background-color: rgb(50,50,50);
+    color: white;
+}
+
+.dataHeading{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.data{
+    font-size: 17px;
+}
+
+@media (max-width:600px) {
+    .form{
+        height: 450px;
+        width: 350px;
+        box-shadow:  0px 0px 10px black;
+    }
+
+    .formWrapper{
+        background-color: rgb(26, 102, 255);
+    }
+
+    .mainText{
+        text-shadow: 0px 0px 5px rgb(26, 102, 255);
+    }
+
+    .button{
+        background-color: rgb(26, 102, 255);
+    }
+
+    .navigationBar{
+        background-color: rgb(26, 102, 255);
+        padding: 5px;
+        font-size: 25px;
+    }
+
+    .navigationBar button{
+        color: rgb(26, 102, 255);
+        font-size: 15px;
+        width: 60px;
+    }
 }

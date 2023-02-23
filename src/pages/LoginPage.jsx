@@ -20,12 +20,12 @@ const LoginPage = () => {
     }
   };
   return (
-    <div className="registerPageWrapper">
-      <form className="registerPageForm" onSubmit={handleSubmit}>
-        <input type="email" placeholder="emmail" />
-        <input type="password" placeholder="Password" />
-        <br />
-        <button>Login</button>
+    <div className="formWrapper">
+      <form className="form" onSubmit={handleSubmit}>
+        <h1 className="mainText">IMS Login</h1>
+        <input type="email" placeholder="Email" className="input" />
+        <input type="password" placeholder="Password" className="input" />
+        <button className="button">Login</button>
       </form>
     </div>
   );
