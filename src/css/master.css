@@ -136,11 +136,24 @@
         background-color: rgb(26, 102, 255);
         padding: 5px;
         font-size: 25px;
+        height: 40px;
+        align-items: center;
     }
 
     .navigationBar button{
         color: rgb(26, 102, 255);
         font-size: 15px;
         width: 60px;
+    }
+    .headingRow{
+        background-color: rgb(26, 102, 255);
+    }
+    .table{
+        border: none;
+        width: 95%;
+    }
+    .data{
+        color: rgb(26, 102, 255);
+        padding: 6px;
     }
 }
